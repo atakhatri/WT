@@ -1,0 +1,35 @@
+body{
+    margin:200px;
+}
+
+h1{
+    text-align:center;
+    font-size:40px;
+}
+h2{
+	font-size:20px;
+	text-align:center;
+}
+
+tr,th,td{
+    border:2px solid black;
+    padding:10px;
+	background-color:#E7E7E8;
+}
+#timetable{
+    font-size:2rem;
+    border-collapse:collapse;
+    display:flex;
+    justify-content:center;
+}
+#lunch{
+    text-align:center;
+    font-weight:bold;
+}
+
+#teachers{
+    font-size:2rem;
+    border-collapse:collapse;
+    display:flex;
+    margin-top:50px;
+}
