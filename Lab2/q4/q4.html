@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <title>Survey Form DEMO</title>
+    <link rel="stylesheet" href="q4.css" />
+  </head>
+
+  <body>
+    <form class="FormContainer">
+      <div class="Title">
+        <h1>Survey Form</h1>
+        <h3>user stories survey form</h3>
+      </div>
+      <div class="FormContent">
+        <table>
+          <tr>
+            <td><p class="label">Name:</p></td>
+            <td><input type="text" placeholder="Enter Name" required /></td>
+          </tr>
+          <tr>
+            <td><p class="label">E-Mail:</p></td>
+            <td><input type="email" placeholder="Enter E-Mail" required /></td>
+          </tr>
+          <tr>
+            <td><p class="label">Work Experience:</p></td>
+            <td><input type="number" placeholder="Enter Number" /></td>
+          </tr>
+          <tr>
+            <td>
+              <p class="label">
+                Are you comfortable in investing in real estate on platform,
+                without first investing properly?
+              </p>
+            </td>
+            <td>
+              <select name="YesNo" id="yn" required>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td><p class="label">Suggestions to build trusted platform</p></td>
+            <td><textarea name="sugg" id="sugg" rows="2"></textarea></td>
+          </tr>
+          <tr>
+            <td><p class="label">You are ready to invest in:</p></td>
+            <td>
+              <input type="checkbox" />Real Estate <br />
+              <input type="checkbox" />Mutual Funds <br />
+              <input type="checkbox" />Crypto Currency <br />
+              <input type="checkbox" />Stocks & Bonds <br />
+            </td>
+          </tr>
+          <tr>
+            <td><p class="label">Are you ready for further contact</p></td>
+            <td>
+              <input type="radio" name="yesno" id="contact" />Yes <br />
+              <input type="radio" name="yesno" id="contact" />No <br />
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Foot">
+        <input type="submit" class="submit" value="Submit" />
+      </div>
+    </form>
+  </body>
+</html>

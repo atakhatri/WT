@@ -1,0 +1,16 @@
+body{
+    background-image: url("Screenshot\ 2025-08-05\ 191020.png");
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    font-size: xx-large;
+    text-decoration: underline;
+    text-align: center;
+}
+
+p{
+    font-size: large;
+}

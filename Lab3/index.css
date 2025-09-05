@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.upper {
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+}
+
+.pfp img {
+  width: 400px;
+  height: auto;
+}
+
+.info {
+  font-size: large;
+  border-left: 3px solid black;
+  padding: 30px;
+}
+
+table {
+  border-top: 3px solid black;
+  padding: 30px;
+}
+
+th {
+  font-size: x-large;
+  width: 25%;
+}
+
+p {
+  font-size: large;
+}
