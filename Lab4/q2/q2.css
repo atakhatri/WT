@@ -1,0 +1,54 @@
+body {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(42, 42, 127);
+}
+
+@keyframes box_animation {
+  0% {
+    background-color: rgb(128, 255, 0);
+    transform: rotate(0deg);
+    left: 0%;
+    top: 0%;
+  }
+  25% {
+    background-color: rgb(255, 0, 0);
+    transform: rotate(360deg);
+    left: 100%;
+    top: 0%;
+  }
+  50% {
+    background-color: rgb(128, 255, 0);
+    transform: rotate(0deg);
+    left: 0%;
+    top: 100%;
+  }
+  75% {
+    background-color: rgb(255, 0, 0);
+    transform: rotate(360deg);
+    left: 100%;
+    top: 100%;
+  }
+  100% {
+    background-color: rgb(128, 255, 0);
+    transform: rotate(0deg);
+    left: 0%;
+    top: 0%;
+  }
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  border-top: 15px solid black;
+  border-right: 15px solid gray;
+  border-bottom: 15px solid black;
+  border-left: 15px solid gray;
+  border-radius: 100px;
+  background-color: blue;
+  position: relative;
+  animation-name: box_animation;
+  animation-duration: 5s;
+  animation: box_animation 5s linear 0s infinite alternate forwards;
+}
