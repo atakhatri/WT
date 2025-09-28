@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>Area of Triangle</title>
+    <link rel="stylesheet" href="q3.css" />
+  </head>
+  <body>
+    <div class="calc">
+      <div class="input">
+        <input type="number" id="base" placeholder="Enter Base" />
+        <input type="number" id="height" placeholder="Enter height" />
+      </div>
+
+      <div class="op">
+        <input type="button" value="GO" onclick="area()" />
+      </div>
+
+      <div id="result"></div>
+    </div>
+  </body>
+  <script>
+    function area() {
+      let base = parseFloat(document.getElementById("base").value);
+      let height = parseFloat(document.getElementById("height").value);
+      let area = (1 / 2) * base * height;
+      document.getElementById("result").innerText =
+        "Area of the Given Triangle = " + area;
+    }
+  </script>
+</html>

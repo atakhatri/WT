@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="q1.css" />
+  </head>
+
+  <body>
+    <div class="calc">
+      <div class="input">
+        <input type="number" id="first" placeholder="Enter First Number" />
+        <input type="number" id="second" placeholder="Enter Second Number" />
+      </div>
+
+      <div class="op">
+        <input type="button" value="+" onclick="sum()" />
+        <input type="button" value="-" onclick="sub()" />
+        <input type="button" value="*" onclick="mul()" />
+        <input type="button" value="/" onclick="div()" />
+        <input type="button" value="%" onclick="mod()" />
+      </div>
+
+      <div id="result"></div>
+    </div>
+  </body>
+  <script>
+    function sum() {
+      let n1 = parseFloat(document.getElementById("first").value);
+      let n2 = parseFloat(document.getElementById("second").value);
+      let sum = n1 + n2;
+      document.getElementById("result").innerText =
+        n1 + " + " + n2 + " = " + sum;
+    }
+    function sub() {
+      let n1 = parseFloat(document.getElementById("first").value);
+      let n2 = parseFloat(document.getElementById("second").value);
+      let sub = n1 - n2;
+      document.getElementById("result").innerText =
+        n1 + " - " + n2 + " = " + sub;
+    }
+    function mul() {
+      let n1 = parseFloat(document.getElementById("first").value);
+      let n2 = parseFloat(document.getElementById("second").value);
+      let mul = n1 * n2;
+      document.getElementById("result").innerText =
+        n1 + " * " + n2 + " = " + mul;
+    }
+    function div() {
+      let n1 = parseFloat(document.getElementById("first").value);
+      let n2 = parseFloat(document.getElementById("second").value);
+      let div = n1 / n2;
+      document.getElementById("result").innerText =
+        n1 + " / " + n2 + " = " + div;
+    }
+    function mod() {
+      let n1 = parseFloat(document.getElementById("first").value);
+      let n2 = parseFloat(document.getElementById("second").value);
+      let mod = n1 % n2;
+      document.getElementById("result").innerText =
+        n1 + " % " + n2 + " = " + mod;
+    }
+  </script>
+</html>

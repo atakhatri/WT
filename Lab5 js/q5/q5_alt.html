@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>Even / Odd</title>
+  </head>
+
+  <body>
+    <div id="result"></div>
+  </body>
+  <script>
+    let EvnOdd = "<h1> 0 - 15 </h1>";
+
+    for (let i = 0; i <= 15; i++) {
+      if (i % 2 == 0) {
+        EvnOdd += `<p>${i} is Even</p>`;
+      } else {
+        EvnOdd += `<p>${i} is Odd<p>`;
+      }
+    }
+
+    document.getElementById("result").innerHTML = EvnOdd;
+  </script>
+</html>

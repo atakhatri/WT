@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <title>Date Excercise</title>
+  </head>
+  <body>
+    <h1>JavaScript Dates</h1>
+    <h2>Using new Date()</h2>
+    <button onclick="getdate()">Get Latest date</button>
+    <p id="demo"></p>
+  </body>
+  <script>
+    function getdate() {
+      const d = new Date();
+      document.getElementById("demo").innerHTML = d;
+    }
+  </script>
+</html>

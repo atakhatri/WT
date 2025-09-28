@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>Squere and Cube</title>
+    <link rel="stylesheet" href="q2.css" />
+  </head>
+  <body>
+    <div class="calc">
+      <div class="input">
+        <input type="number" name="" id="value" placeholder="Enter a Number" />
+      </div>
+
+      <div class="op">
+        <input type="button" value="Squere" onclick="squere()" />
+        <input type="button" value="Cube" onclick="cube()" />
+      </div>
+
+      <div id="result"></div>
+    </div>
+    <div id="res"></div>
+  </body>
+  <script>
+    function squere() {
+      let num = parseFloat(document.getElementById("value").value);
+      let sqr = num ** 2;
+      document.getElementById("result").innerText =
+        "Squere of " + num + " = " + sqr;
+    }
+    function cube() {
+      let num = parseFloat(document.getElementById("value").value);
+      let cub = num ** 3;
+      document.getElementById("result").innerText =
+        "Cube of " + num + " = " + cub;
+    }
+    let output = "<table><tr><th>Number</th><th>Square</th><th>Cube</th></tr>";
+
+    for (let i = 0; i <= 10; i++) {
+      let square = i ** 2;
+      let cube = i ** 3;
+      output += `<tr><td>${i}</td><td>${square}</td><td>${cube}</td></tr>`;
+    }
+
+    output += "</table>";
+
+    document.getElementById("res").innerHTML = output;
+  </script>
+</html>

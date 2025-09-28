@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title>Pop-up msg</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <button onclick="showAlert()">Use Alert</button>
+    <button onclick="showConfirm()">Use Confirm</button>
+    <button onclick="showPrompt()">Use Prompt</button>
+  </body>
+  <script>
+    function showAlert() {
+      alert("This is an alert box!, above the webpage!!!");
+    }
+
+    function showConfirm() {
+      const result = confirm("Are you sure you want to Confirm?");
+      if (result) {
+        alert("msg Confirmed.");
+      } else {
+        alert("msg canceled.");
+      }
+    }
+
+    function showPrompt() {
+      const name = prompt("Enter your name:");
+      if (name) {
+        alert("Welcome, " + name + "!");
+      } else {
+        alert("NO NAME GIVEN BY USER!!");
+      }
+    }
+  </script>
+</html>

@@ -1,0 +1,95 @@
+<html>
+  <head>
+    <title>Reg Form</title>
+    <link rel="stylesheet" href="form.css" />
+  </head>
+  <body>
+    <div class="title">
+      <h1>hi there !!!</h1>
+      <h1>Regestration Form With Validation Props.</h1>
+    </div>
+    <div class="formcontent">
+      <h1>REGISTER YOUR SELF</h1>
+      <form id="form" onsubmit="return validateForm()">
+        <table>
+          <tr>
+            <th>Name :</th>
+            <td>
+              <input type="text" id="name" />
+              <div class="error" id="NameError"></div>
+            </td>
+          </tr>
+
+          <tr>
+            <th>Email :</th>
+            <td>
+              <input type="text" id="email" />
+              <div class="error" id="EmailError"></div>
+            </td>
+          </tr>
+
+          <tr>
+            <th>Password :</th>
+            <td>
+              <input type="password" id="password" />
+              <div class="error" id="PasswordError"></div>
+            </td>
+          </tr>
+
+          <tr>
+            <th>Confirm Password :</th>
+            <td>
+              <input type="password" id="confirmPassword" />
+              <div class="error" id="ConfirmError"></div>
+            </td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td><input type="submit" value="Submit" /></td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </body>
+  <script>
+    function validateForm() {
+      let isValid = true;
+      document.getElementById("NameError").textContent = "";
+      document.getElementById("EmailError").textContent = "";
+      document.getElementById("PasswordError").textContent = "";
+      document.getElementById("ConfirmError").textContent = "";
+
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      const confirmPassword = document.getElementById("confirmPassword").value;
+
+      if (name === "") {
+        document.getElementById("NameError").textContent = "Name is required";
+        isValid = false;
+      }
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        document.getElementById("EmailError").textContent =
+          "Invalid email format";
+        isValid = false;
+      }
+
+      if (password.length < 8) {
+        document.getElementById("PasswordError").textContent =
+          "Pass must be >= 8 chars.";
+        isValid = false;
+      }
+
+      if (password !== confirmPassword) {
+        document.getElementById("ConfirmError").textContent =
+          "Passwords do not match";
+        isValid = false;
+      }
+
+      return isValid;
+    }
+  </script>
+</html>

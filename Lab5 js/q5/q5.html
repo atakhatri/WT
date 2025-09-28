@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>Even / Odd</title>
+  </head>
+  <body>
+    <div id="result"></div>
+  </body>
+  <script>
+    let output = "<table><tr><th>0-15</th></tr>";
+
+    for (let i = 0; i <= 15; i++) {
+      if (i % 2 == 0) {
+        output += `<tr><td>${i} is Even</td></tr>`;
+      } else {
+        output += `<tr><td>${i} is Odd</td></tr>`;
+      }
+    }
+
+    output += "</table>";
+
+    document.getElementById("result").innerHTML = output;
+  </script>
+</html>

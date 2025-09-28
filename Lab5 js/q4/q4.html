@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Temp Convertor</title>
+    <link rel="stylesheet" href="q4.css" />
+  </head>
+  <body>
+    <div class="calc">
+      <div class="input">
+        <input type="number" id="celsius" placeholder="Enter Tempereture" />
+      </div>
+
+      <div class="op">
+        <input type="button" value="GO" onclick="temp()" />
+      </div>
+
+      <div id="result"></div>
+    </div>
+  </body>
+  <script>
+    function temp() {
+      let cel = parseFloat(document.getElementById("celsius").value);
+      let fer = cel * 1.8 + 32;
+      document.getElementById("result").innerText =
+        cel + " in fahrnheit = " + fer;
+    }
+  </script>
+</html>
